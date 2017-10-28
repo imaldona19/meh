@@ -10,7 +10,7 @@ export class HighOrLowComponent  {
   currentNumber: number = 1;
   nextNumber: number = 2;
   score: number = 0;
-
+  
   constructor() { }
   
   startNewGame(){
@@ -18,10 +18,8 @@ export class HighOrLowComponent  {
     this.nextNumber = this.generateNumber();
     this.getNextNumber();
     this.score = 0;
-
-  
   }
-
+  
   
   getNextNumber(){
     //1. move next number into the current number. 
@@ -37,23 +35,26 @@ export class HighOrLowComponent  {
   generateNumber(){
     return Math.floor(Math.random()*10) +1;
   }
-
+  
   guessLower(){
-    // check if the next number is lower 
-    // If yes, give points
-    // otherwise take points away
-    // >>>> here you use the if statement
-
-    // finally get the next number
-  }
     
-
+    if (this.nextNumber < this.currentNumber){
+      this.score += 1;
+    } else{
+      this.score -= 1;
+    };
+    
+    this.getNextNumber();
+  }
+  
   guessHigher(){
-    // check if the next number is higher 
-    // If yes, give points
-    // otherwise take points away
-    // >>>> here you use the if statement
 
-    // finally get the next number
+    if (this.nextNumber > this.currentNumber) {
+      this.score += 1;
+    } else{
+      this.score -= 1;
+    };
+    
+    this.getNextNumber();
   }
 }
