@@ -33,6 +33,18 @@ export class ArraysComponent implements OnInit {
   matrixC: number[]   = [ 2, 5, 1, 7, 4, 4 ,7];
   result: number[] = [];
 
+  array2d: number[][] = [
+    [ 1, 2, 3 ], // row 0
+    [ 4, 5, 6 ], // row 1
+    [ 7, 8, 9 ]  // row 2
+  ];
+
+  x1 = this.array2d[0][0];
+  x6 = this.array2d[1][2];
+
+  row1 = this.array2d[1];
+  x5 = this.row1[2];
+
   constructor() { }
 
   ngOnInit() {
@@ -138,11 +150,25 @@ export class ArraysComponent implements OnInit {
     }
   }
 
-   showAllSocks2() {
+  showAllSocks2() {
     for(let sock of this.mySocks) {
       console.log(sock);
     }
   }
+
+  triangle: number[][] = [
+    [ 1 ],
+    [ 1, 1 ],
+    [ 1, 2, 1]
+  ]
+  nextPascalTriangleStep() {
+    // 1. get the last row
+
+    // 2. create a new array for the new row
+
+    // 3. 
+  }
+
 
 }
 
