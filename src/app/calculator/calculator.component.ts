@@ -9,37 +9,37 @@ import { CalculatorService } from "app/calculator.service";
 export class CalculatorComponent {
   
   public from: number = 10;
-  public result : number;
+  public result: number;
   
   constructor(private calculator: CalculatorService) { }
   
   public getMiles(i) {
-    return i*0.000621371192;
+    return i * 0.000621371192;
   }
   public getMeters(i) {
-    return i*1609.344;
+    return i * 1609.344;
   }
   
   public convertoMiles() {
     this.result = this.getMiles(this.from);
   }
   
-  public converttoMeters(){
+  public converttoMeters() {
     this.result = this.getMeters(this.from);
   }
   
-  public convertToCelsius(){
+  public convertToCelsius() {
     this.result = this.calculator.convertToCelsious(this.from);
   }
   
-  public convertToFahrenheit(){
+  public convertToFahrenheit() {
     this.result = this.calculator.convertToFahrenheit(this.from);
   }
   
-  public convertToPounds(){
+  public convertToPounds() {
     this.result = this.calculator.convertToPounds(this.from);
   }
-  public convertToKilograms(){
+  public convertToKilograms() {
     this.result = this.calculator.convertToKilograms(this.from);
   }
-  
+}
