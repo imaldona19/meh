@@ -13,21 +13,13 @@ export class CalculatorComponent {
   
   constructor(private calculator: CalculatorService) { }
   
-  public getMiles(i) {
-    return i * 0.000621371192;
-  }
-  public getMeters(i) {
-    return i * 1609.344;
-  }
-  
   public convertoMiles() {
-    this.result = this.getMiles(this.from);
+    this.result = this.calculator.getMiles(this.from);
   }
   
   public converttoMeters() {
-    this.result = this.getMeters(this.from);
-  }
-  
+    this.result = this.calculator.getMeters(this.from);
+
   public convertToCelsius() {
     this.result = this.calculator.convertToCelsious(this.from);
   }
