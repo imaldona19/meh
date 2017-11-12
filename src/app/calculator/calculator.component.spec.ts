@@ -5,20 +5,20 @@ import { CalculatorComponent } from './calculator.component';
 describe('CalculatorComponent', () => {
   let component: CalculatorComponent;
   let fixture: ComponentFixture<CalculatorComponent>;
-
+  
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ CalculatorComponent ]
     })
     .compileComponents();
   }));
-
+  
   beforeEach(() => {
     fixture = TestBed.createComponent(CalculatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
+  
   it('should be created', () => {
     expect(component).toBeTruthy();
   });

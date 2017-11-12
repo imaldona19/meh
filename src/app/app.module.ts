@@ -9,6 +9,7 @@ import { TicTacToeComponent } from './tic-tac-toe/tic-tac-toe.component';
 import { XoPipe } from './xo.pipe';
 import { FibonacciComponent } from './fibonacci/fibonacci.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CalculatorService } from "app/calculator.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { CalculatorComponent } from './calculator/calculator.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    CalculatorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
