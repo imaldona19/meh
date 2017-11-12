@@ -5,19 +5,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css']
 })
-export class CalculatorComponent implements OnInit {
+export class CalculatorComponent {
 
   public from: number = 10;
   public result : number;
 
   constructor() { }
 
-}
-
-function getMiles(i) {
+public getMiles(i) {
      return i*0.000621371192;
 }
-function getMeters(i) {
+public getMeters(i) {
      return i*1609.344;
 }
 
+}
