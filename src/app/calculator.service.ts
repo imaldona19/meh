@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+  convertToKilograms(arg0: any): any {
+    throw new Error("Method not implemented.");
+  }
 
 @Injectable()
 export class CalculatorService {
-
+  
   constructor() { }
-
+  
   public getMiles(i) {
     return i*0.000621371192;
   }
@@ -13,11 +16,18 @@ export class CalculatorService {
   }
   
   public convertToCelsious(f: number):number {
-  return (5/9) * (f-32) 
+    return (5/9) * (f-32) 
   }
-
+  
   public convertToFahrenheit(c: number):number {
     return (9 / 5) * (c + 32)
   }
-
+  
+  public convertToPounds(KG: number):number {
+    return KG * 2.2
+  }
+  public convertToKilograms(LB: number):number {
+    return LB * 0.454
+    
+  }
 }

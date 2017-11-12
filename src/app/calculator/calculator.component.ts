@@ -31,9 +31,15 @@ export class CalculatorComponent {
   public convertToCelsius(){
     this.result = this.calculator.convertToCelsious(this.from);
   }
-
+  
   public convertToFahrenheit(){
     this.result = this.calculator.convertToFahrenheit(this.from);
   }
   
-}
+  public convertToPounds(){
+    this.result = this.calculator.convertToPounds(this.from);
+  }
+  public convertToKilograms(){
+    this.result = this.calculator.convertToKilograms(this.from);
+  }
+  
