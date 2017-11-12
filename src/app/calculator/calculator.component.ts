@@ -19,4 +19,12 @@ public getMeters(i) {
      return i*1609.344;
 }
 
+public convertoMiles() {
+  this.result = this.getMiles(this.from);
+}
+
+public converttoMeters(){
+  this.result=this.getMeters(this.from);
+}
+
 }
