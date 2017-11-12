@@ -19,6 +19,7 @@ export class CalculatorComponent {
   
   public converttoMeters() {
     this.result = this.calculator.getMeters(this.from);
+  }
 
   public convertToCelsius() {
     this.result = this.calculator.convertToCelsious(this.from);
